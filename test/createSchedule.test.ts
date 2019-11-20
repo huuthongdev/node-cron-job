@@ -1,5 +1,4 @@
 import request from 'supertest';
-import { deepEqual } from 'assert';
 
 import { app } from '../src/refs';
 
@@ -8,7 +7,7 @@ describe.only('POST / -> Create schedule', () => {
         const response = await request(app)
             .post('/')
             .send({
-                "apiURL": "https://api.dev.rebateton.com",
+                "apiURL": "https://facebook.com",
                 "method": "get",
                 "cronExpression": "50 * * * * *",
                 "frequency": 2,
